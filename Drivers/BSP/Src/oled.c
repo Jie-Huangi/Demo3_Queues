@@ -743,7 +743,7 @@ void OLED_PrintString(uint8_t x, uint8_t y, char *str, const Font *font, OLED_Co
     if (utf8Len == 0)
       break; // 有问题的UTF-8编码
 
-    // 寻找字符  TODO 优化查找算法, 二分查找或者hash
+    // 寻找字符   to 优化查找算法, 二分查找或者hash
     for (uint8_t j = 0; j < font->len; j++)
     {
       head = (uint8_t *)(font->chars) + (j * oneLen);
